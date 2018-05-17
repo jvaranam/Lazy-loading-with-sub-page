@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AddTodoPage } from './../add-todo/add-todo'
+
+/**
+ * Generated class for the TodosPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
+@Component({
+  selector: 'page-todos',
+  templateUrl: 'todos.html',
+})
+export class TodosPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad TodosPage');
+  }
+
+  onAddTodo(){
+  	this.navCtrl.push(AddTodoPage);
+  }
+
+}
